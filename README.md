@@ -4,8 +4,7 @@
 A collection of Verilog HDL projects implemented as part of my RTL design learning journey.
 
 ## Repository Contents
-- Combinational Circuits
-  - Half Adder
+- Combinational Circuits:
   - Full Adder
   - Ripple Carry Adder
 
