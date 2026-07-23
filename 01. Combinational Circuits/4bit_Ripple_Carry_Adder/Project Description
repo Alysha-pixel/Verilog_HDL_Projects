@@ -1,0 +1,210 @@
+# Combinational Circuits in Verilog HDL
+
+This folder contains my implementation of fundamental combinational logic circuits using **Verilog HDL**. These projects are part of my journey toward becoming an **RTL Design / ASIC Design Engineer**.
+
+The objective of this folder is to understand how digital logic is translated into hardware using Verilog, learn RTL coding practices, write testbenches, simulate designs, and verify functionality using waveform analysis.
+
+---
+
+## Learning Objectives
+
+Through these projects, I learned:
+
+- Fundamentals of combinational logic design
+- Gate-level modelling using built-in Verilog primitives
+- Module declaration and port definition
+- Module instantiation
+- Structural design methodology
+- Writing synthesizable Verilog code
+- Creating Verilog testbenches
+- Applying different input test cases
+- Using `$monitor`, `$dumpfile`, and `$dumpvars`
+- Generating VCD (Value Change Dump) files
+- Verifying outputs using GTKWave
+- Basic Verilog simulation flow using Icarus Verilog
+
+---
+
+## Tools Used
+
+- Visual Studio Code
+- Verilog HDL
+- Icarus Verilog
+- GTKWave
+
+---
+
+## Simulation Flow
+
+For every project, I followed the same workflow.
+
+### Step 1
+Implemented the Verilog RTL/Structural design.
+
+### Step 2
+Created a separate testbench.
+
+The testbench includes:
+
+- Input stimulus generation
+- Output monitoring
+- Simulation control
+- VCD generation
+
+### Step 3
+
+Compile
+
+```bash
+iverilog -o output.vvp testbench.v
+```
+
+### Step 4
+
+Run simulation
+
+```bash
+vvp output.vvp
+```
+
+### Step 5
+
+Generate waveform
+
+```bash
+gtkwave output.vcd
+```
+
+### Step 6
+
+Verify the outputs with the expected truth table.
+
+---
+
+# Projects
+
+## 1. Full Adder
+
+### Description
+
+A 1-bit Full Adder implemented using **Gate-Level Modelling**.
+
+### Concepts Learned
+
+- XOR gate
+- AND gate
+- OR gate
+- Gate primitives
+- Intermediate wires
+- Structural modelling
+- Truth table verification
+
+### Files
+
+```
+fulladd.v
+fulladd_tb.v
+fulladd.vcd
+```
+
+---
+
+## 2. 4-bit Ripple Carry Adder
+
+### Description
+
+A 4-bit Ripple Carry Adder built by cascading four Full Adders.
+
+### Concepts Learned
+
+- Hierarchical design
+- Module instantiation
+- Carry propagation
+- Vector inputs and outputs
+- Structural design using reusable modules
+
+### Files
+
+```
+ripple_adder.v
+ripple_adder_tb.v
+ripple_adder.vcd
+```
+
+---
+
+## Verification
+
+Each design is verified using:
+
+- Multiple test cases
+- Console simulation output
+- GTKWave waveform analysis
+
+The waveform confirms that the outputs match the expected behaviour for all applied inputs.
+
+---
+
+# Folder Structure
+
+```
+01_Combinational_Circuits
+│
+├── Full_Adder
+│   ├── fulladd.v
+│   ├── fulladd_tb.v
+│   ├── fulladd.vcd
+│   ├── waveform.png
+│   └── README.md
+│
+├── 4_bit_Ripple_Carry_Adder
+│   ├── ripple_adder.v
+│   ├── ripple_adder_tb.v
+│   ├── ripple_adder.vcd
+│   ├── waveform.png
+│   └── README.md
+│
+└── README.md
+```
+
+---
+
+# Key Learnings
+
+Working on these projects helped me understand:
+
+- Difference between design modules and testbenches
+- How combinational circuits are described in Verilog
+- How larger circuits are created by reusing smaller modules
+- Importance of simulation before synthesis
+- Reading and interpreting timing waveforms
+- Writing clean and modular Verilog code
+
+---
+
+# Future Additions
+
+This folder will be updated with more combinational logic designs, including:
+
+- Half Adder
+- Half Subtractor
+- Full Subtractor
+- Multiplexers
+- Demultiplexers
+- Encoders
+- Priority Encoders
+- Decoders
+- Comparators
+- ALU
+- Barrel Shifter
+- Code Converters
+
+---
+
+## References
+
+- Verilog HDL by Samir Palnitkar
+- IEEE Verilog Standard
+- Icarus Verilog
+- GTKWave
+- RTL Design practice
