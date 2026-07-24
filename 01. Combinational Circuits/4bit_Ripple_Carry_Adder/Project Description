@@ -56,15 +56,15 @@ The testbench includes:
 Compile
 
 ```bash
-iverilog -o output.vvp testbench.v
-```
+iverilog -o .\output.vvp .\testbench.v
+``
 
 ### Step 4
 
 Run simulation
 
 ```bash
-vvp output.vvp
+vvp .\output.vvp
 ```
 
 ### Step 5
@@ -72,7 +72,7 @@ vvp output.vvp
 Generate waveform
 
 ```bash
-gtkwave output.vcd
+gtkwave.exe .\output.vcd
 ```
 
 ### Step 6
@@ -104,6 +104,7 @@ A 1-bit Full Adder implemented using **Gate-Level Modelling**.
 ```
 fulladd.v
 fulladd_tb.v
+fulladd.vvp
 fulladd.vcd
 ```
 
@@ -128,6 +129,7 @@ A 4-bit Ripple Carry Adder built by cascading four Full Adders.
 ```
 ripple_adder.v
 ripple_adder_tb.v
+ripple_adder.vvp
 ripple_adder.vcd
 ```
 
